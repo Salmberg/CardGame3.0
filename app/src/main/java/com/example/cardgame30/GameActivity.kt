@@ -1,5 +1,6 @@
 package com.example.cardgame30
 
+import android.content.Intent
 import android.media.Image
 import android.media.TimedText
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +8,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 
 class GameActivity : AppCompatActivity() {
 
@@ -43,12 +46,16 @@ class GameActivity : AppCompatActivity() {
 
         higherButton.setOnClickListener {
             deck.drawCard()
-            rounds = rounds +1
+            rounds = rounds + 1
             roundTextView.text = "Omgång: $rounds"
 
             if (deck.currentCard.number > deck.nextCard.number) {
                 score = score + 1
                 scoreTextView.text = "Poäng: $score"
+            }
+            if (rounds >= 11) {
+                val intent = Intent(this, ResultActivity::class.java)
+                startActivity(intent)
             }
 
             cardImageView.setImageResource(deck.currentCard.image)
@@ -56,16 +63,28 @@ class GameActivity : AppCompatActivity() {
 
         lowerButton.setOnClickListener {
             deck.drawCard()
-            rounds = rounds +1
+            rounds = rounds + 1
             roundTextView.text = "Omgång: $rounds"
 
             if (deck.currentCard.number < deck.nextCard.number) {
                 score = score + 1
                 scoreTextView.text = "Poäng: $score"
             }
+            if (rounds >= 11) {
+                val intent = Intent(this, ResultActivity::class.java)
+                startActivity(intent)
+            }
             cardImageView.setImageResource(deck.currentCard.image)
-
-
         }
+
+
     }
 }
+
+/*fun endOfGame() {
+
+    val intent = Intent(this, ResultActivity::class.java)
+    startActivity(intent)
+}
+'
+ */
