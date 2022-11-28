@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var headLineTextView: TextView
     lateinit var infoTextView: TextView
     lateinit var readyTextView: TextView
-    lateinit var startButton: Button
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

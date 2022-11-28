@@ -19,8 +19,6 @@ object Deck {
         nextCard = cards.removeAt(0)
         currentCard= cards[0]
 
-
-
         return nextCard
     }
 
@@ -46,7 +44,6 @@ fun createCards(){
     cards.add(Card("Queen of hearts", 12, R.drawable.queen_of_hearts2))
     cards.add(Card("King of hearts", 13, R.drawable.king_of_hearts2))
     cards.add(Card("Ace of hearts", 14, R.drawable.ace_of_hearts))
-
 
 }
 
