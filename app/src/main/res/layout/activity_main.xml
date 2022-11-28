@@ -8,15 +8,16 @@
 
     <TextView
         android:id="@+id/headlineTextView"
-        android:layout_width="201dp"
-        android:layout_height="57dp"
+        android:layout_width="241dp"
+        android:layout_height="76dp"
         android:layout_marginStart="176dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="177dp"
+        android:fontFamily="@font/bevan"
         android:text="Välkommen till detta Kortspel!"
         android:textAlignment="center"
         android:textColor="#151313"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,15 +25,17 @@
 
     <TextView
         android:id="@+id/infoTextView"
-        android:layout_width="230dp"
-        android:layout_height="191dp"
+        android:layout_width="292dp"
+        android:layout_height="194dp"
         android:layout_marginStart="176dp"
         android:layout_marginTop="204dp"
         android:layout_marginEnd="177dp"
+        android:fontFamily="@font/amatica_sc"
         android:text="Konceptet är enkelt.  Spelet slumpar fram ett kort och du får  gissa om nästa kort är högre eller lägre än det föregående kortet. En runda i spelet är  totalt 10 st gissningar.  En rätt gissning ger ett poäng ."
         android:textAlignment="center"
         android:textColor="#0B0A0A"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headlineTextView" />
@@ -42,10 +45,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:background="@drawable/custom_button2"
         android:text="Kör igång!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:backgroundTint="@null"/>
 
     <ImageView
         android:id="@+id/imageView"
@@ -63,10 +70,12 @@
         android:id="@+id/readyTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="180dp"
+        android:fontFamily="@font/amatica_sc"
         android:text="Är du redo?"
         android:textColor="#1B1919"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

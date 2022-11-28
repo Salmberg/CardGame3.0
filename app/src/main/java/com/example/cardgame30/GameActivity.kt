@@ -10,6 +10,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
+import nl.dionsegijn.konfetti.core.Party
+import nl.dionsegijn.konfetti.core.Position
+import nl.dionsegijn.konfetti.core.emitter.Emitter
+import java.util.concurrent.TimeUnit
 
 class GameActivity : AppCompatActivity() {
 
@@ -40,6 +44,7 @@ class GameActivity : AppCompatActivity() {
         cardImageView.setImageResource(Deck.cards[0].image)
 
 
+
         roundTextView.text = "Omgång: $rounds"
         scoreTextView.text = "Poäng: $score"
 
@@ -52,12 +57,11 @@ class GameActivity : AppCompatActivity() {
             if (deck.currentCard.number > deck.nextCard.number) {
                 score = score + 1
                 scoreTextView.text = "Poäng: $score"
+
             }
             if (rounds >= 11) {
-                val intent = Intent(this, ResultActivity::class.java)
-                startActivity(intent)
+                endOfGame()
             }
-
             cardImageView.setImageResource(deck.currentCard.image)
         }
 
@@ -71,20 +75,19 @@ class GameActivity : AppCompatActivity() {
                 scoreTextView.text = "Poäng: $score"
             }
             if (rounds >= 11) {
-                val intent = Intent(this, ResultActivity::class.java)
-                startActivity(intent)
+               endOfGame()
             }
             cardImageView.setImageResource(deck.currentCard.image)
         }
 
-
+    }
+    fun endOfGame() {
+        val intent = Intent(this, ResultActivity::class.java)
+        startActivity(intent)
+        intent.putExtra("Final score", score)
+        startActivity(intent)
     }
 }
 
-/*fun endOfGame() {
 
-    val intent = Intent(this, ResultActivity::class.java)
-    startActivity(intent)
-}
-'
- */
+

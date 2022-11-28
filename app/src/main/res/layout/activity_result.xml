@@ -4,66 +4,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ResultActivity">
+    tools:context=".ResultActivity"
+    >
 
-    <TextView
-        android:id="@+id/finishedTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Dina 10 omgångar är nu slut!"
-        android:textAlignment="center"
-        android:textColor="#0C0C0C"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/resultTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="#090909"
-        android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/finishedTextView" />
+   <nl.dionsegijn.konfetti.xml.KonfettiView
+    android:id="@+id/konfettiView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
 
-    <TextView
-        android:id="@+id/betterTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:textAlignment="center"
-        android:textColor="#0B0B0B"
-        android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultTextView"
-        tools:text="Bättre kan du" />
 
-    <Button
-        android:id="@+id/betterButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="480dp"
-        android:text="Kör igen"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/finishedTextView"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="50dp"
+     android:layout_marginTop="10dp"
+     android:layout_marginEnd="50dp"
+     android:fontFamily="@font/bevan"
+     android:text="Dina 10 omgångar är nu slut."
+     android:textAlignment="center"
+     android:textColor="#0C0C0C"
+     android:textSize="35sp"
+     android:textStyle="bold"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
+
+ <TextView
+     android:id="@+id/resultTextView"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="70dp"
+     android:fontFamily="@font/amatica_sc"
+     android:text="TextView"
+     android:textAlignment="center"
+     android:textColor="#090909"
+     android:textSize="35sp"
+     android:textStyle="bold"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/finishedTextView" />
+
+ <TextView
+     android:id="@+id/betterTextView"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="70dp"
+     android:fontFamily="@font/amatica_sc"
+     android:textAlignment="center"
+     android:textColor="#0B0B0B"
+     android:textSize="35sp"
+     android:textStyle="bold"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/resultTextView"
+     tools:text="Snyggt, men bättre kan du!" />
 
     <Button
         android:id="@+id/finishButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginBottom="100dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:background="@drawable/custom_button2"
         android:text="Avsluta"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/betterButton" />
+        app:backgroundTint="@null"/>
+
+    <Button
+        android:id="@+id/betterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:background="@drawable/custom_button"
+        android:text="Kör igen"
+        app:layout_constraintBottom_toTopOf="@+id/finishButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:backgroundTint="@null"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
