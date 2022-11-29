@@ -45,14 +45,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
+        android:background="@drawable/custom_button2"
+        android:fontFamily="@font/bevan"
+        android:text="Kör igång!"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:background="@drawable/custom_button2"
-        android:text="Kör igång!"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:backgroundTint="@null"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"

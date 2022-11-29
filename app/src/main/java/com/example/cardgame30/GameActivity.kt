@@ -24,15 +24,19 @@ class GameActivity : AppCompatActivity() {
     lateinit var questionTextView: TextView
 
 
-    val deck = Deck
 
+
+    val deck = Deck
     var score: Int = 0
     var rounds: Int = 1
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
 
+        Deck.newRound()
 
         roundTextView = findViewById(R.id.roundTextView)
         scoreTextView = findViewById(R.id.scoreTextView)
@@ -42,8 +46,6 @@ class GameActivity : AppCompatActivity() {
         questionTextView = findViewById(R.id.questionTextView)
         cardImageView = findViewById(R.id.cardImageView)
         cardImageView.setImageResource(Deck.cards[0].image)
-
-
 
         roundTextView.text = "Omgång: $rounds"
         scoreTextView.text = "Poäng: $score"

@@ -23,7 +23,7 @@ object Deck {
     }
 
     fun newRound(){
-
+        createCards()
         cards.shuffle()
     }
 

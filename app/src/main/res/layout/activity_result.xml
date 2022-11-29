@@ -14,22 +14,22 @@
     android:layout_height="match_parent" />
 
 
- <TextView
-     android:id="@+id/finishedTextView"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:layout_marginStart="50dp"
-     android:layout_marginTop="10dp"
-     android:layout_marginEnd="50dp"
-     android:fontFamily="@font/bevan"
-     android:text="Dina 10 omgångar är nu slut."
-     android:textAlignment="center"
-     android:textColor="#0C0C0C"
-     android:textSize="35sp"
-     android:textStyle="bold"
-     app:layout_constraintEnd_toEndOf="parent"
-     app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/finishedTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/bevan"
+        android:text="Dina 10 omgångar är nu slut."
+        android:textAlignment="center"
+        android:textColor="#0C0C0C"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
  <TextView
      android:id="@+id/resultTextView"
@@ -66,27 +66,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
+        android:background="@drawable/custom_button2"
+        android:fontFamily="@font/bevan"
+        android:text="Avsluta"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:background="@drawable/custom_button2"
-        android:text="Avsluta"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:backgroundTint="@null"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/betterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/bevan"
+        android:text="Kör igen"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:background="@drawable/custom_button"
-        android:text="Kör igen"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toTopOf="@+id/finishButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:backgroundTint="@null"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
