@@ -31,35 +31,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
- <TextView
-     android:id="@+id/resultTextView"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:layout_marginTop="70dp"
-     android:fontFamily="@font/amatica_sc"
-     android:text="TextView"
-     android:textAlignment="center"
-     android:textColor="#090909"
-     android:textSize="35sp"
-     android:textStyle="bold"
-     app:layout_constraintEnd_toEndOf="parent"
-     app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toBottomOf="@+id/finishedTextView" />
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/amatica_sc"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#090909"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finishedTextView" />
 
- <TextView
-     android:id="@+id/betterTextView"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:layout_marginTop="70dp"
-     android:fontFamily="@font/amatica_sc"
-     android:textAlignment="center"
-     android:textColor="#0B0B0B"
-     android:textSize="35sp"
-     android:textStyle="bold"
-     app:layout_constraintEnd_toEndOf="parent"
-     app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toBottomOf="@+id/resultTextView"
-     tools:text="Snyggt, men bättre kan du!" />
+    <TextView
+        android:id="@+id/betterTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/amatica_sc"
+        android:textAlignment="center"
+        android:textColor="#0B0B0B"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultTextView"
+        tools:text="Snyggt, men bättre kan du!" />
 
     <Button
         android:id="@+id/finishButton"
