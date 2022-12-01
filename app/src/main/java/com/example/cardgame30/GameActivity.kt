@@ -24,12 +24,9 @@ class GameActivity : AppCompatActivity() {
     lateinit var questionTextView: TextView
 
 
-
-
     val deck = Deck
     var score: Int = 0
     var rounds: Int = 1
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
